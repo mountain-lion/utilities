@@ -33,10 +33,10 @@ DST=$2
 source_count=0
 destination_count=0
 
-#ls -lR "$DST"|awk {'print $9'} > destination_list.txt
-#ls -lR "$SRC"|awk {'$1=$2=$3=$4=$5=$6=$7=$8=""; print $0'} > source_list.txt
+#ls -lR "$DST"|awk {'print $9'} > destination_list.txt #skips portion of file names with white spaces -hence discarded
+#ls -lR "$SRC"|awk {'$1=$2=$3=$4=$5=$6=$7=$8=""; print $0'} > source_list.txt #adds leading white space and hence discarded
 
-#ls -lRt is used to sort ls output by time (most recent first)
+#ls -lRt is used to sort the ls output by time (most recent first)
 ls -lRt "$DST"|awk '{for(i=9;i<=NF;i++){printf "%s ", $i}; printf "\n"}' > destination_list.txt
 ls -lRt "$SRC"|awk '{for(i=9;i<=NF;i++){printf "%s ", $i}; printf "\n"}' > source_list.txt
 #exit 0
