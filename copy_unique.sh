@@ -1,4 +1,18 @@
 #!/bin/bash
+#title          :copy_unique.sh
+#description    :This script recursively goes through the file names of all the files in the source directory
+#		 and finds out files which are not present in the detination directory. 
+#		 Furthermore, it copies the latest version (if multiple copies present) of the 'unique' files in 
+#		 the ./unique_files folder. While copying it maintains the directory structure/tree as the file was in the 
+#		 source folder and also preserve the file attributes like timestamps, permissions etc. instact.
+#author         :Sujoy Sarkar (s.sujoy@gmail.com)
+#date           :20160420
+#version        :1.0    
+#usage          :./copy_unique.sh [source directory] [destination directory]
+#notes          :This script comes with absolutely NO WARRANTY whatsover. 
+#		 User of the script is at his/her own risk for all the consequences of running this script.    
+#bash_version   :4.2.24(1)-release
+#============================================================================
 
 if [[ $# -ne 2 && $1 == "-help" ]]
 then
