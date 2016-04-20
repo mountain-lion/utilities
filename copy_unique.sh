@@ -3,8 +3,8 @@
 #description    :This script recursively goes through the file names of all the files in the source directory
 #		 and finds out files which are not present in the detination directory. 
 #		 Furthermore, it copies the latest version (if multiple copies present) of the 'unique' files in 
-#		 the ./unique_files folder. While copying it maintains the directory structure/tree as the file was in the 
-#		 source folder and also preserve the file attributes like timestamps, permissions etc. instact.
+#		 the ./unique_files folder. While copying, it maintains the directory structure/tree as the file was in the 
+#		 source folder and also preserves the file attributes like timestamps, permissions etc. instact.
 #author         :Sujoy Sarkar (s.sujoy@gmail.com)
 #date           :20160420
 #version        :1.0    
